@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="colors.js"></script>
+    <style>
+      .web {
+        font-weight: bold;
+        color: red;
+      }
+      #first {
+        color: green;
+      }
+      span {
+        color: blue;
+      }
+    </style>
+    <title>WEB1 - Welcome</title>
+  </head>
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+      <div id="article">
+        <h2 style="background-color: coral; color: powderblue;">WEB란 무엇인가?</h2>
+        <p><span id="first" class="web">The World Wide Web(abbreviate WWW or the Web)</span> is an information space where documents and other web resources are identified by Uniform Resource Locators(URLs), interlinked by hypertext links, and accessible via the <span>Internet</span>. [1] English scientist Tim Berners-Lee invented <span class="web">the World Wide Web</span> in 1989. He wrote <span>the first web browser</span> in 1990 while employed at CERN in Switzerland. [2][3] The browser was released outside CERN in 1991, first ot other reseach institutions starting in January 1991 and to the general public on the Internet in August 1991.</p>
+      </div>
+    </div>
+  </body>
+</html>

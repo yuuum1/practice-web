@@ -1,0 +1,64 @@
+//자소서글자수계산기1
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자소서 글자수 계산기</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        h1 {
+            margin-top: 30px;
+        }
+        #count {
+            float: right;
+        }
+    </style>
+</head>
+<body class="container">
+    <h1>자기소개</h1>
+    <textarea class="form-control" rows="3" id="jasoseol">저는 인성 문제가 없습니다.</textarea>
+    <script>
+	var content = document.getElementById('jasoseol').value;
+	console.log(content);	//textarea 변수를 console에 출력시킴
+	console.log(content.length);	//textarea 변수의 string 길이(공백포함)를 console에 출력시킴
+    </script>
+</body>
+</html>
+
+//자소서글자수세기3
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자소서 글자수 계산기</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        h1 {
+            margin-top: 30px;
+        }
+        #count {
+            float: right;
+        }
+    </style>
+</head>
+<body class="container">
+    <h1>자기소개</h1>
+    <textarea onkeydown = 'counter()'	//키보드를 누를 때마다 글자수가 늘어나는 이벤트 실행
+    class="form-control" rows="3" id="jasoseol">저는 인성 문제가 없습니다.</textarea>
+    <span id="count">(0/200)</span>
+    <script>
+	function counter() {
+		var content = document.getElementById('jasoseol').value;
+		if (content.length > 200) {
+		content = content.substring(0,200);	//최대 200자까지 입력가능
+		document.getElementById('jasoseol').value = content;	//입력한 내용을 content변수에 대입
+		}
+		document.getElementById('count').innerHTML = '(' + content.length + '/200)';
+	}
+	counter();
+	
+    </script>
+</body>
+</html>

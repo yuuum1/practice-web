@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<title>로또 번호 추첨기</title>
+</head>
+<body>
+	<h1>로또 번호 추첨기1</h1>
+	<script>	//js 작성하는 곳
+		//var num = Math.random()	//0~1 사이의 실수를 랜덤 추출
+		var num = Math.random() * 45 + 1;	//1~45 사이의 실수를 랜덤 추출
+		var ball1 = parseInt(num);	//num을 int화시킴
+		document.write(ball1);
+	</script>
+
+	<h1>로또 번호 추첨기</h1>
+	<script>
+		var lotto = [];
+		//방법1: 직접 추가
+		lotto.push(parseInt(Math.random() * 45 + 1));
+		lotto.push(parseInt(Math.random() * 45 + 1));
+		lotto.push(parseInt(Math.random() * 45 + 1));
+		lotto.push(parseInt(Math.random() * 45 + 1));
+		lotto.push(parseInt(Math.random() * 45 + 1));
+		lotto.push(parseInt(Math.random() * 45 + 1));
+		//방법2: for문으로 추가
+		//for (var i = 0; i < 6; i++) {
+		//	var num = parseInt(Math.random() * 45 + 1);
+		//	if(lotto.indexOf(num) == -1) {
+		//		lotto.push(num); //.indexOf: 값이 있으면 0 없으면 -1 ->중복값제거
+		//	}
+		//	//lotto.push(parseInt(Math.random()*45+1));
+		//}
+		lotto.sort((a,b)=>a-b);	//.sort: a-b이면 오름차순, b-a이면 내림차순으로 정렬
+		documnet.write(lotto);
+	</script>
+</body>
+</html>
